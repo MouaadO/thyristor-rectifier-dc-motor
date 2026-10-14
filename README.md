@@ -1,6 +1,6 @@
 # Thyristor Rectifier and DC Motor
 
-Practical implementation and experimental validation of a thyristor bridge supplying a DC machine, supported by MATLAB calculations and simulation diagrams.
+Practical implementation of a thyristor rectifier supplying a DC machine. I studied the effect of firing angle, conduction mode and a freewheeling diode through laboratory measurements and MATLAB calculations.
 
 ## Practical implementation and experimental validation
 
@@ -10,7 +10,7 @@ Practical implementation and experimental validation of a thyristor bridge suppl
 - Compared operation with a freewheeling diode and with an additional smoothing inductor.
 - Compared experimental observations with the theoretical and simulation results documented in the French report.
 
-The practical measurements and simulation outputs are identified separately in the French report. The image below is a simulation diagram, not a photograph of the physical setup.
+### Simulation circuit
 
 ![Simulation diagram](simulation-diagram.png)
 
@@ -18,15 +18,15 @@ The practical measurements and simulation outputs are identified separately in t
 
 ![Experimental oscilloscope waveforms](experimental-waveforms.png)
 
-Recorded waveforms from the practical implementation (see the French report for the operating conditions).
+Oscilloscope measurements from the practical work. Circuit settings and measurement conditions are given in the report.
 
 ## Repository contents
 
 | File | Purpose |
 | --- | --- |
 | [thyristor-dc-motor-report-fr.pdf](thyristor-dc-motor-report-fr.pdf) | Full French report: experimental setup, measurements, calculations and simulation comparisons. |
-| [results-and-waveforms.zip](results-and-waveforms.zip) | Complete archive of the supplied diagrams, waveforms and spectra. |
-| [simulation-diagram.png](simulation-diagram.png) | Simulation diagram preview shown below. |
+| [results-and-waveforms.zip](results-and-waveforms.zip) | Circuit diagrams, waveforms and spectra. |
+| [simulation-diagram.png](simulation-diagram.png) | Simulation circuit diagram. |
 | [conduction-angle.m](conduction-angle.m) | MATLAB analysis script. |
 | [freewheeling-diode-analysis.m](freewheeling-diode-analysis.m) | MATLAB analysis script. |
 | [rectifier-characteristics.m](rectifier-characteristics.m) | MATLAB analysis script. |
@@ -37,18 +37,16 @@ Recorded waveforms from the practical implementation (see the French report for 
 1. Read the French report to understand the circuit, operating conditions and measurement protocol.
 2. Extract `results-and-waveforms.zip` to inspect the recorded results and simulation figures.
 3. Run the MATLAB analysis scripts individually and use the circuit diagrams in the report for the simulation study.
-The supplied files for this project contain MATLAB scripts and simulation figures; an editable Simulink model was not included.
 
 ## Software requirements
 
-MATLAB is required for `.m` scripts. Simulink and the power-system blocks used by the model are required for `.slx` files. Some analytical scripts use `syms`/`vpasolve` and therefore require Symbolic Math Toolbox. The exact original MATLAB release is not specified; model compatibility should be checked in your installation.
+MATLAB and Symbolic Math Toolbox for the analytical scripts.
 
 ## Project context
 
-Academic power-electronics project completed at the National Polytechnic School of Algiers in 2024/2025, including practical laboratory work and simulation. This repository presents Amani Mouaad’s portfolio version of a collaborative academic project.
+Power-electronics group project completed at the National Polytechnic School of Algiers in 2024/2025, combining practical laboratory work and simulation.
 
-**Portfolio author:** Amani Mouaad  
+**Author:** Amani Mouaad  
 **Supervision:** Pr. M. Mahmoudi and Mr. Benachour.
 
-The technical report is retained in French. Repository documentation is in English. The original source documents are preserved separately.
-
+The report is in French.
